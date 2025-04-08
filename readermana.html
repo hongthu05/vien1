@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý độc giả</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Quản lý độc giả</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="book-management.html">Quản lý kho</a></li>
+                <li><a href="borrow-return.html">Mượn trả sách</a></li>
+                <li><button id="logoutBtn">Đăng xuất</button></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Danh sách độc giả</h2>
+            <table id="readerTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Tên độc giả</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+        </section>
+        <section>
+            <h2>Thêm độc giả mới</h2>
+            <form id="addReaderForm">
+                <div>
+                    <label for="newReaderName">Tên độc giả:</label>
+                    <input type="text" id="newReaderName" name="newReaderName" required>
+                </div>
+                <button type="submit">Thêm độc giả</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Thư Viện Yêu Thích</p>
+    </footer>
+    <script src="js/script.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/reader.js"></script>
+</body>
+</html>
