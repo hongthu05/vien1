@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Đăng ký</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="login.html">Đăng nhập</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="auth-form">
+            <form id="registerForm">
+                <div>
+                    <label for="regUsername">Tên người dùng:</label>
+                    <input type="text" id="regUsername" name="regUsername" required>
+                </div>
+                <div>
+                    <label for="regEmail">Email:</label>
+                    <input type="email" id="regEmail" name="regEmail" required>
+                </div>
+                <div>
+                    <label for="regPassword">Mật khẩu:</label>
+                    <input type="password" id="regPassword" name="regPassword" required>
+                </div>
+                <div>
+                    <label for="confirmPassword">Xác nhận mật khẩu:</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                </div>
+                <button type="submit">Đăng ký</button>
+                <p id="registerError" class="error-message" style="display: none;"></p>
+                <p id="registerSuccess" class="success-message" style="display: none;">Đăng ký thành công! <a href="login.html">Đăng nhập ngay</a>.</p>
+            </form>
+            <p>Đã có tài khoản? <a href="login.html">Đăng nhập</a></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Thư Viện Yêu Thích</p>
+    </footer>
+    <script src="js/auth.js"></script>
+</body>
+</html>
