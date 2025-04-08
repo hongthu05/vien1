@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mượn trả sách</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Mượn trả sách</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="reader-management.html">Quản lý độc giả</a></li>
+                <li><a href="book-management.html">Quản lý kho</a></li>
+                <li><button id="logoutBtn">Đăng xuất</button></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Mượn sách</h2>
+            <form id="borrowBookForm">
+                <div>
+                    <label for="borrowReaderId">ID độc giả:</label>
+                    <input type="text" id="borrowReaderId" name="borrowReaderId" required>
+                </div>
+                <div>
+                    <label for="borrowBookId">ID sách:</label>
+                    <input type="text" id="borrowBookId" name="borrowBookId" required>
+                </div>
+                <button type="submit">Mượn sách</button>
+                <p id="borrowMessage" class="message"></p>
+            </form>
+        </section>
+        <section>
+            <h2>Trả sách</h2>
+            <form id="returnBookForm">
+                <div>
+                    <label for="returnBookId">ID sách trả:</label>
+                    <input type="text" id="returnBookId" name="returnBookId" required>
+                </div>
+                <button type="submit">Trả sách</button>
+                <p id="returnMessage" class="message"></p>
+            </form>
+        </section>
+        <section>
+            <h2>Sách đang mượn</h2>
+            <ul id="borrowedBooksList">
+                </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Thư Viện Yêu Thích</p>
+    </footer>
+    <script src="js/script.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/borrow.js"></script>
+</body>
+</html>
