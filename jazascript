@@ -1,0 +1,38 @@
+// server.js
+const express = require('express');
+const bodyParser = require('body-parser');
+// const db = require('./database'); // Giả sử bạn có file database.js để kết nối DB
+
+const app = express();
+const port = 3000;
+
+app.use(bodyParser.json());
+
+app.post('/api/register', (req, res) => {
+  const { username, password } = req.body;
+  // Code để lưu người dùng vào cơ sở dữ liệu
+  // db.createUser(username, password)
+  res.json({ message: 'Đăng ký thành công!' });
+});
+
+app.post('/api/login', (req, res) => {
+  const { username, password } = req.body;
+  // Code để kiểm tra thông tin đăng nhập trong cơ sở dữ liệu
+  // const user = db.findUser(username, password);
+  if (username === 'test' && password === '123') {
+    res.json({ token: 'your_auth_token' });
+  } else {
+    res.status(401).json({ error: 'Đăng nhập thất bại!' });
+  }
+});
+
+app.get('/api/books', async (req, res) => {
+  // Code để lấy danh sách sách từ cơ sở dữ liệu
+  // const books = await db.getAllBooks();
+  const books = [{ id: 1, title: 'Sách 1' }, { id: 2, title: 'Sách 2' }];
+  res.json(books);
+});
+
+app.listen(port, () => {
+  console.log(`Server đang chạy tại http://localhost:${port}`);
+});
